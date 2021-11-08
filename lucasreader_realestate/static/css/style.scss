@@ -1,0 +1,748 @@
+
+body, html {
+  font-family: 'Montserrat-Light';
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+ 	}
+
+/* BOX OUTER */
+.boxes {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  z-index: 0;
+  overflow-x: hidden; }
+
+/*NAV OVERLAY*/
+.nav-overlay{
+  display:none;
+}
+
+.nav-overlay li, #right-arrow{
+  list-style:none;
+  text-decoration: none;
+  color: rgb(150,150,150);
+  z-index:99;
+}
+
+.nav-overlay li:hover, #right-arrow:hover{
+  color:white;
+  cursor: pointer;
+}
+
+
+#right-arrow{
+  position:absolute;
+  display: flex;
+  align-self:flex-end;
+  margin-right:0rem;
+  font-size:2rem;
+  cursor: pointer;
+}
+
+/* ----- */
+/* BOX 1 --HERO */
+.box1 {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/image06.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  z-index: 0;
+  height: 100vh; }
+
+#title-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  align-items: center; }
+
+#title-container h1 {
+  position: relative;
+  font-family: 'Montserrat-ExtraLight';
+  text-decoration: none;
+  color: black; }
+
+.arrow-down {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border: solid black;
+  border-width: 0 .1em .1em 0;
+  padding: .20em;
+  transform: rotate(45deg);
+  transition: border-width 300ms, width 300ms, height 300ms; }
+
+#lets {
+  font-size: 3rem; }
+
+#make {
+  font-size: 4rem; }
+
+#moves {
+  font-size: 5rem; }
+
+/* --- */
+/* BOX 2 */
+.box2 {
+  background-image: url("../img/image08.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+  z-index: 0;
+  height: 40vh;
+  padding: 2rem 6rem 2rem 6rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+#box2-inner {
+  opacity: 1; }
+
+.box2 button {
+  align-self: center;
+  font-size: 2vw;
+  margin-bottom: 20px; }
+
+.listings_img img {
+  height: 200px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  justify-self: flex-start; }
+
+#listings h1 {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 4vw; }
+
+.listings_text {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vw;
+  background-color: white;
+  width: 80vw;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 4rem; }
+
+.listings_text:hover {
+  background-color: #BCCABB; }
+
+#listing {
+  background-color: lightgrey;
+  width: 20rem;
+  height: 40rem;
+  margin: 2rem;
+  text-align: center;
+  box-shadow: .1rem .1rem .1rem .1rem; }
+
+/*BOX 4 --- ABOUT */
+.box4 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #bccabb;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2); }
+
+.box4-l {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 1.3rem 0 1.3rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: .4rem;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  font-size: 5.5vw; }
+
+.box4-l h2 {
+  font-size:6vw; 
+  margin-top:.4rem;
+  margin-bottom:1.7rem;}
+
+.box4-l img {
+  margin-bottom:0;
+  position: relative;
+  height: auto;
+  width: 35vw;
+  box-shadow: 1px 0px 1px 1px rgba(0, 0, 0, 0.8); }
+
+.box4-r {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem 5.5rem 4rem;
+  width: 100%;
+  height: 50vh;
+  position: relative; }
+
+#aboutNext {
+  position: absolute;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size:1.2rem;
+  bottom:.8rem;
+  width:6rem;
+  height:1.8rem;
+  background-color: #ccb895
+  }
+
+.box4 button {
+  bottom: 0;
+  margin-bottom: 1rem;
+  border: none;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+  background-color: lightgrey;
+  font-size: 1rem;
+  height: 3rem;
+  width: 15rem; }
+
+.box4 p {
+  font-family: 'PTSerif-Regular';
+  position: relative;
+  float: right;
+  font-size: 5vw;
+  position: relative;
+  float: right; }
+
+/* ------ */
+/* BOX 5*/
+.box5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-image: url('home.jpg');*/
+  background-color: #a18465;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
+  opacity: 0.8;
+  z-index: 0;
+  height: 100vh;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6); }
+
+.box5 p {
+  position: relative; }
+
+.contact_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+  justify-content: center;
+  background-color: lightgrey;
+  height: 28rem;
+  width: 80vw;
+  font-size: 8vw;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+.contact_box h3 {
+  margin-top: .5rem;
+  margin-bottom: 1rem; }
+
+.contact_box input, textarea {
+  margin: 3px;
+  width: 60vw;
+  border:none; }
+
+.contact_box textarea{
+  border-radius:.5rem;
+  padding-left: 1rem;
+  padding-top:.5rem;
+}
+
+.contact_box #sub{
+  border-radius: 4rem;
+  width: 10rem;
+  font-size:3vw;
+  height:2rem;
+  padding-left:0 !important;
+}
+
+.contact_box input {
+  height: 1.3rem;
+  border-radius:4rem;
+  padding-left:1.2rem;
+  border:none;
+  width: 55vw; }
+
+#back-to-top{
+  position:absolute;
+  bottom: 3rem;
+}
+
+/* ------ */
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: black;
+  color: white; }
+
+/* ------ */
+/*LOGIN PAGE CSS*/
+#login_box {
+  width: 500px;
+  height: 600px;
+  border: 1px solid black;
+  margin-left: 200px;
+  background: lightgrey;
+  align-self: center; }
+
+#listings_admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 10px #888888;
+  background-color: lightgrey;
+  margin: 4rem; }
+
+.add-listing {
+  position: relative;
+  display: inline-block;
+  height: 10rem;
+  width: 25rem;
+  margin: .5rem;
+  background-color: lightgrey;
+  box-shadow: 3px 7px #888888; }
+
+#form {
+  margin: .3rem; }
+
+.admin-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  position: fixed; }
+
+.admin-box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  height: 100vh; }
+
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .nav-overlay{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    position:fixed;
+    height:100%;
+    top:0;
+    width:100vw;
+    left: -97vw;
+    background-color:black;
+    opacity:.8;
+    z-index: 98;
+    color:white;
+    font-size: 5rem;
+    margin:0;
+  }
+  #lets {
+    margin-top:0;
+    font-size: 6rem; }
+
+  #make {
+    font-size: 7rem; }
+
+  #moves {
+    font-size: 8rem; }
+
+
+  .arrow-down {
+    width: 4rem;
+    height: 4rem;;
+    border-width: 0 .3em .3em 0;
+ }
+
+  .box4-l img {
+    width: 30vw;
+  }
+  .box4-l {
+    margin-top: 1.5rem;
+    font-size: 4vw; 
+  }
+  .box4-r {
+    padding: 0 4rem 10rem 4rem;
+  }
+  .box4 p {
+    font-size: 4.5vw;
+  }
+
+  .box4 button {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    height: 6rem;
+    width: 25rem; }
+
+  #aboutNext {
+    position: absolute;
+    bottom: 1rem;
+    font-size:5vw; }
+
+  .contact_box {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-top:1rem;
+    height: 80vh;
+    font-size: 7vw;
+    }
+
+  #aboutNext{
+    height: 4rem;
+    width:8rem;
+    font-size: 4vw;
+  }
+
+  .contact_box form{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_box h3 {
+    margin-top: .5rem;
+    margin-bottom: 1rem; }
+
+  .contact_box input, textarea {
+    margin: 5px;
+    width: 60vw;
+    height:40vh; 
+    font-size:3vw;}
+
+  .contact_box input {
+    height: 3vh;
+    width: 60vw; }
+  }
+
+  #sub{
+    font-size:3.3vw;
+    height:4rem;
+    width:18rem;
+  }
+
+
+@media screen 
+  and (min-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .box4-l img {
+      width: 25vw;
+    }
+    .nav-overlay{
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items:center;
+      position:fixed;
+      height:100%;
+      top:0;
+      width:100vw;
+      left: -97vw;
+      background-color:black;
+      opacity:.8;
+      z-index: 98;
+      color:white;
+      font-size: 5rem;
+      margin:0;
+    }
+
+    #right-arrow{
+      margin-right: .5rem;
+    }
+
+    .box4-l {
+      padding: 0 2rem 0 2rem;
+      margin-top: 1.5rem;
+      font-size: 3.9vw;
+    }
+
+    #aboutNext {
+      position: absolute;
+      bottom: 0rem;
+      font-size:5vw; }
+
+    .box4-l h2{
+      margin-bottom:0;
+    }
+
+      .box4 p {
+        font-size: 4vw;
+        margin-bottom: 6rem;
+    }
+    .box4 button {
+      margin-bottom: 4rem;
+      margin-top: 0;
+      font-size: 2.5rem;
+      height: 10rem;
+      width: 35rem; }
+
+    .contact_box {
+      height: 80vh;
+      font-size: 7vw;
+      }
+
+    .contact_box h3 {
+      margin-top: .5rem;
+      margin-bottom: 1rem; }
+
+    .contact_box input, textarea {
+      margin: 5px;
+      width: 60vw;
+      height:47vh; 
+      font-size: 3vw;}
+
+    .contact_box input {
+      height: 4vh;
+      width: 55vw; }
+}
+
+
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      .contact_box {
+        height: 85vh;
+        font-size: 7vw;
+        }
+        #lets {
+          margin-top:0;
+          font-size: 8rem; }
+
+        #make {
+          font-size: 9rem; }
+
+        #moves {
+          font-size: 10rem; }
+
+        .arrow-down {
+          width: 7rem;
+          height: 7rem;;
+          border-width: 0 .4em .4em 0;
+        }
+}
+
+/*LANDSCAPES*/
+/*MACBOOK PRO RETINA*/
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+        #title-container {
+          width: 50%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-self: flex-end;;
+          justify-content: center;
+          text-align:center;
+          float:right;
+          align-items: center;}
+
+        #title-container h1 {
+          position: relative;
+          font-family: 'Montserrat-ExtraLight';
+          text-decoration: none;
+          color: black; }
+
+        #lets {
+          margin-top:0;
+          font-size: 2rem; }
+
+        #make {
+          font-size: 4rem; }
+
+        #moves {
+          font-size: 6rem; }
+
+        .arrow-down {
+          width: 5rem;
+          height: 5rem;;
+          border-width: 0 .4em .4em 0;
+        }        
+
+        .box4 {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+          z-index: 1;
+          height: 100vh;
+          overflow: hidden;
+          background-color: #bccabb;
+          background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
+          box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2); }
+
+        .box4-l {
+          position: relative;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-top: 0rem;
+          align-items: center;
+          width: 50%;
+          height: 100vh;
+           }
+
+        .box4-l h2 {
+          margin: 2rem 4rem 4rem 4rem;
+          font-size: 2rem; }
+
+        .box4-l img {
+          margin-bottom: 0;
+          position: relative;
+          height: auto;
+          width: 17rem; }
+
+        .box4-r {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-top:5rem;
+          width: 50%;
+          height: 100vh;
+          position: relative; }
+
+        #aboutNext {
+          box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.3);
+          cursor:pointer;
+          display:flex;
+          flex-direction:column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          font-size:1.5rem;;
+          bottom:3rem;
+          width:8rem;
+          height:3rem;
+          background-color: #ccb895}
+
+        .box4 button {
+          bottom: 0;
+          margin-top:0;
+          margin-bottom: 1rem;
+          border: none;
+          background-color: lightgrey;
+          background-image: url("background-color: #ccb895");
+          font-size: 1.2rem;
+          height: 5rem;
+          width: 13rem; }
+
+        .box4 p {
+          font-family: 'PTSerif-Regular';
+          position: relative;
+          float: right;
+          margin-bottom:2rem;
+          font-size: 1.5rem;
+          position: relative;
+          float: right; }
+
+        .listings_text {
+          width: 25rem; 
+        }
+
+        #listings h1 {
+          font-size: 1.5rem; }        
+
+        .contact_box {
+          height: 35rem;
+          width: 30rem;
+          font-size: 2vw;
+          text-align:center;
+          }
+
+        .contact_box form{
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+          align-items:center;
+        }
+
+        .contact_box h3 {
+          font-size:3rem;
+          margin-top: .5rem;
+          margin-bottom: 1rem; }
+
+        .contact_box input, textarea {
+          margin: 5px;
+          width: 25rem;
+          height:15rem; 
+          font-size: 1.3rem;}
+
+        .contact_box textarea{
+          font-size:1.3rem;
+        }
+
+        .contact_box input {
+          height: 6vh;
+          width: 25rem;
+           }
+
+        .contact_box #sub{
+          font-size:1rem;
+        }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block list %}
+				<ul>
+					<li><a href="#">Admin</a></li>
+					<li><a href="#">Updates</a></li>
+					<li><a href="logout">Logout</a></li>
+				</ul>
+{% endblock %}
+{% block content %}
+<div class="admin-box">
+	<h1>Admin Module</h1>
+</div>
+<div class="admin-box-2">
+	<h1>Listing Control Panel</h1>
+	<div class='add-listing'>
+	<h2>Add Listing</h2>
+		<form method="POST" action="">
+				{{ form.hidden_tag() }}
+				<div id='form'>
+					{{ form.address.label }}
+					{{ form.address }}
+				</div>
+				<div id='form'>
+					{{ form.price.label }}
+					{{ form.price }}
+				</div>
+				<div id='form'>
+					{{ form.submit }}
+				
+	</div>
+		<div id="listings_admin">
+			<h2>Current Listings</h2>
+			{% for listing in listings %}
+			<p><b>Address</b></p>
+			<p>{{ listing.address }}</p>
+			<p><b>Price</b></p>
+			<p>{{ listing.price }}</p>
+		{% endfor %}
+		</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	<div class="box4">
+		{% for listing in listings %}
+			<h2>Address</h2>
+			<p>{{ listing.address }}</p>
+			<h2>Price</h2>
+			<p>${{ listing.price }}</p>
+		{% endfor %}
+
+
+	</div>
+	
+{% endblock content %}
+
+

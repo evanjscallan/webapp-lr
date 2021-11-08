@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+{% block list %}
+{% endblock list %}
+<head>
+	<meta charset="utf-8">
+	<title>Admin Page</title>
+</head>
+<body>
+
+{% block content %}
+	<div class="box1">
+	<!---BELOW/Allows CSRF Token to validate, go to admin page--->
+	<form method="POST" action="">
+		{{ form.hidden_tag() }}
+		<div style="margin-left: 300px" class="contact_box">
+			<p>Login</p>
+			<div>
+			{{ form.email.label }}
+			{{ form.email }}
+			</div>
+			{{ form.password.label }}
+			{{ form.password }}
+			<div>
+			{{ form.submit.label }}
+			{{ form.submit }}
+			</div>
+		</div>
+
+	</div>
+	</form>
+{% endblock content %}
+</body>
+
+</html>

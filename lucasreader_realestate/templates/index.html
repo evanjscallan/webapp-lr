@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% block content %}
+	<!DOCTYPE html>
+	<html>
+		<head>
+			{% block head %}
+			<link rel='stylesheet' href='../static/css/style.css'>
+			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+			{% endblock head %}
+
+			<title>Lucas Reader - Realtor</title>
+		</head>
+		<body>
+			<div class="container">
+				
+				<nav class='nav-overlay'>
+						
+						<ul>
+								<li id='toabout'onclick='toAbout()'>About</li>
+								<li id='tolistings' onclick='toListings()'>Listings</li>
+								<li>Learn</li>
+								<li id ='tocontact' onclick='toContact()'>Contact</li>
+						</ul>
+						<p id='right-arrow' onclick='navFullScreen()'> &#5171;</p>
+				</nav> 
+				<div class="boxes">
+					<div class="box1" id="index">
+						<div id='title-container'>
+							<h1 id='lets'>Let's</h1><h1 id='make'>Make</h1><h1 id='moves'> Moves.</h1>
+							<a href='#about'><div class='arrow-down'></div></a>
+						</div>
+						
+					</div>
+					<div onscroll='myFunction' class="box4" id="about">
+						<div class='box4-l'>
+							<img id="profilepic" src="../static/img/profile_pic.jpg">
+							<h2><b>Home, Deep in the Heart of Texas.</b></h2>
+						</div>
+						<div class='box4-r'>
+							<p id='realtorinfo'><!-----aboutARRAY CYCLE 'p'---></p>
+							<h2 id='aboutNext'>Next</h2>
+						</div>
+					</div>
+					
+					<!---->
+					<div class="box2" id="listings">
+						
+						<div id="box2-inner">
+							
+							<div class ="listings_text">
+								<a href="https://lucasreader.matrix.ntreis.net/Matrix/Public/?L=1&ap=SCH"><h1>Search for Listings</h1></a>
+							</div>
+							<!---{% for listing in listings %}
+								<div id='listing'>
+									<p><b>Address</b></p>
+									<p>{{ listing.address }}</p>
+									<p><b>Price</b></p>
+									<p>{{ listing.price }}</p>
+								</div>
+							{% endfor %}
+						</div> --->
+						</div><!---box2-inner--->
+						<!--- <button>See More...</button> --->
+						</div><!---box2--->
+						<!---
+						<div class="box3" id="learn">
+								<h1> Learn </h1>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/_RXGZr_VMFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						--->
+						<div class="box5" id="contact">
+							<div class="contact_box">
+								<h3> Let's talk. </h3>
+								<form method="POST">
+									
+									<input name='user-input-name' id='form-info' type="text" placeholder="Full Name..."></input>
+									<input name='user-input-phone' id='form-info' type="text" placeholder="Phone Number..."></input>
+									<input name='user-input-email' id='form-info' type="text" placeholder="Email Address..."></input>
+									<textarea name='user-input-message'rows="15" cols="20"placeholder="Hi Lucas! Let's make moves."></textarea>
+									<input id='sub' type="submit" value='SEND MESSAGE'></input>
+								</form>
+
+							</div>
+								<p id='back-to-top'><a href='#index'>Back to Top ^</a></p>
+						</div>
+
+						<footer>
+							<p>2021. All Rights Reserved.</p>
+						</footer>
+					</div>
+				</div>
+				<script>
+					//For scrolling through different parts of the 'about' section
+					//****IF YOU NEED TO EDIT CONTENT -- CHANGE THE TEXT IN BETWEEN THE '<p> and </p>'
+					var about1 = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent leo tellus, feugiat ac ultrices ac, volutpat sed nisi. Nullam sit amet urna in sapien bibendum feugiat id id ligula. Suspendisse. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>"
+					var about2 = "<p>This is the second about text volutpat sed nisi. Nullam sit amet urna in sapien bibendum feugiat id id ligula volutpat sed nisi. Nullam sit amet urna in sapien bibendum feugiat id id ligula</p>"
+					var about3 = "<p>Let's make moves? Make moves make moves. volutpat sed nisi. Nullam sit amet urna in sapien bibendum feugiat id id ligula volutpat sed nisi. Nullam sit amet urna in sapien bibendum feugiat id id ligula</p>"
+					var about4 = "<p>Something something something something real estate</p>"
+					var about5 = "<p>Call to action with button below. volutpat sed nisi. Nullam sit amet urna in sapien bibendum feugiat id id ligula volutpat sed nisi. Nullam sit amet urna in sapien </p><button id='callToAction'><a style='text-decoration:none; color:black' href='#contact'>GET STARTED</a></button>"
+					var aboutArray = [about1, about2, about3, about4, about5]
+					var aboutIndex = 0
+					document.querySelector('#realtorinfo').innerHTML = about1;
+					document.querySelector("#about #aboutNext").addEventListener('click', nextText);
+				
+					function nextText() {
+						var aboutSelector = document.querySelector('#about p')
+						aboutSelector.innerHTML = aboutArray[aboutIndex++%aboutArray.length]
+						if (aboutIndex == aboutArray.length){
+								aboutIndex = 0;
+						}
+					}
+
+				
+				navFullScreen()
+				function navFullScreen(){
+					if (document.querySelector('.nav-overlay').style.left == '-97vw'){
+						anime({
+							targets: '.nav-overlay',
+							left: '0vw',
+							duration:1000,
+							easing: 'linear',
+						});
+					} else {
+							anime({
+							targets: '.nav-overlay',
+							left: '-97vw',
+							duration:1000,
+							easing: 'linear',
+						});;
+					}
+				}
+
+				function toAbout(){
+					var about_section = document.querySelector(".box4");
+					anime({
+						targets: '.nav-overlay',
+						left: '-97vw',
+						duration: 500,
+						easing: 'linear'
+					})
+					about_section.scrollIntoView();
+				};
+
+				function toListings(){
+					var listings_section = document.querySelector(".box2");
+					anime({
+						targets: '.nav-overlay',
+						left: '-97vw',
+						duration: 500,
+						easing: 'linear',
+					})
+					listings_section.scrollIntoView();
+				};
+				function toContact(){
+					var contact_section = document.querySelector(".box5");
+					anime({
+						targets: '.nav-overlay',
+						left: '-97vw',
+						duration: 500,
+						easing: 'linear',
+					})
+					contact_section.scrollIntoView();
+				};
+
+				</script>
+			{% endblock content %}
+		</body>
+	</html>
